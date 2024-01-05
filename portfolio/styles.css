@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     font-weight:lighter;
+    box-sizing: border-box ;
 }
 
 body{
@@ -67,11 +68,8 @@ a:hover{
     color:green;
 }
 
-.projects{
-    background-color:rgb(41, 41, 41)
-}
 
-.projects a{
+#projects a{
    padding:0; 
 }
 
@@ -80,15 +78,17 @@ a:hover{
     flex-direction: column;
     align-items:center;
     justify-content: center;
-    object-fit: cover;
     background-color: rgb(37, 39, 37);
     padding:10px;
     border:1px dashed green;
+    
+    
    
 }
 .grid img{
-    width:40vh;
-    height:auto;
+    width:20vw;
+    height:30vh;
+    object-fit:cover;
   
 }
 
@@ -96,11 +96,13 @@ a:hover{
     color:rgb(20, 142, 2);
 }
 
-.projects{
+#projects{
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content:space-evenly;
+    height:70vh;
+    background-color:rgb(41, 41, 41);
    
 }
 
@@ -128,6 +130,21 @@ a:hover{
 
 }
 
-.projects h3:hover{
-    content:"<"
+a  h3:before{
+    content:"</";
+    opacity:0;
+   
 }
+
+a h3::after{
+    content: ">";
+    opacity:0;
+    transition:opacity 0.1s ease-in-out;
+}
+
+a:hover h3::before,
+a:hover h3::after{
+    opacity:1;
+    transition:opacity 0.1s ease-in-out;
+}
+
