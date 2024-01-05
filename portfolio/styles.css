@@ -71,5 +71,63 @@ a:hover{
     background-color:rgb(41, 41, 41)
 }
 
-iframe{
+.projects a{
+   padding:0; 
+}
+
+.grid{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    object-fit: cover;
+    background-color: rgb(37, 39, 37);
+    padding:10px;
+    border:1px dashed green;
+   
+}
+.grid img{
+    width:40vh;
+    height:auto;
+  
+}
+
+.grid h3{
+    color:rgb(20, 142, 2);
+}
+
+.projects{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+   
+}
+
+.grid-total{
+    display:flex;
+    gap:10px;
+}
+
+@media only screen and (max-width:600px){
+    
+.grid-total{
+    display:flex;
+    gap:10px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+}
+
+.project-title{
+    padding:10px;
+    font-size:60px;
+    color:white;
+    text-decoration: underline;
+
+}
+
+.projects h3:hover{
+    content:"<"
 }
