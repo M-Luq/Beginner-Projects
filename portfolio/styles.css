@@ -220,7 +220,7 @@ a:hover h3::after{
 }
 
 #contact a:hover{
-    
+    position:relative;
     top:10px;
     transition: top 1s ease-in-out;
 
