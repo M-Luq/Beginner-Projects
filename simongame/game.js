@@ -15,6 +15,16 @@ $(document).keypress(function() {
   }
 });
 
+$(document).on("touchstart touchmove touchend", function(event){
+  event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
+  
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
+
 $(".btn").click(function() {
 
   var userChosenColour = $(this).attr("id");
