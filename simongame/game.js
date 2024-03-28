@@ -7,23 +7,16 @@ var userClickedPattern = [];
 var started = false;
 var level = 0;
 
-$(document).keypress(function() {
+$(".start-btn").click(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
     nextSequence();
     started = true;
   }
+  $(".start-btn").css("visibility","hidden");
 });
 
-$(document).on("touchstart touchmove touchend", function(event){
-  event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
-  
-  if (!started) {
-    $("#level-title").text("Level " + level);
-    nextSequence();
-    started = true;
-  }
-});
+
 
 $(".btn").click(function() {
 
